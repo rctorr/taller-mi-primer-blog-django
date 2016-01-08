@@ -14,7 +14,7 @@ El tutorial a seguir es el creado por la comunidad de DjangoGirls http://tutoria
 Tenemos un espacio en gitter donde se publica toda la información de reuniones, dudas, propuestas, ~~idas de pinta~~ y cosas así en [DjangoFriends](https://gitter.im/rctorr/djangofriends)
 
 ## Sugerencias
-...
+ - Llevar laptop
 
 ## Por hacer
 ...
