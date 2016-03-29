@@ -172,8 +172,170 @@ for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
 					</ul>
 				</section>
 
-			</div>
+				<section>
+					<section>
+						<h2>Programando mi primer blog con Django</h2>
+						<h2>Día 2</h2>
+						<p>
+							<small>Por: <a href="http://twitter.com/pathSanch">@pathSanch</a>, @amapel, @kary, <a href="http://twitter.com/rctorr">@rctorr</a></small>
+						</p>
+						<p>
+							DjangoFriends: <a href="https://gitter.im/rctorr/djangofriends">http://gitter.im/rctorr/djangofriends</a>
+						</p>
+					</section>
+					<section>
+						<h3>La tarea:</h3>
+						<h2>¿Las peticiones que hace un navegador a un servidor web de que tipo son?</h2>
+						<ul>
+							<li>Las peticiones se realizan utilizando el protocolo <a href="https://es.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a></li>
+							<li>El protocolo HTTP es soportado por el protocolo <a href="https://es.wikipedia.org/wiki/Transmission_Control_Protocol">TCP</a> (Transmision Control Protocol)</li>
+						</ul>
+					</section>
+					<section>
+						<h3>La tarea:</h3>
+						<ul>
+							<li>El protocolo TCP lo primero que hace es establecer una conexión entre el cliente y servidor y luego entonces transmite los datos.</li>
+							<img src="img/client_server_interaction.gif" alt="img mostrando flujo de datos una petición http" />
+						</ul>
+					</section>
+					<section>
+						<h3>La tarea:</h3>
+						<ul>
+							<li>Las peticiones HTTP se responden bajo demanda y son unidireccionales</li>
+							<li>Los <a href="https://es.wikipedia.org/wiki/WebSocket">Websockets</a> también funcionan sobre TCP (orientados a conección) pero permiten una comunicación bidireccional</li>
+						</ul>
+					</section>
+					<section>
+						<h3>La tarea:</h3>
+						<ul>
+							<li>El 17 de marzo del 2016 publicaron <a href="https://blog.heroku.com/archives/2016/3/17/in_deep_with_django_channels_the_future_of_real_time_apps_in_django" target="_blank">Django Channels</a></li>
+							<li>Puede ser usado apartir de Django v1.9 como un modulo externo, pero se planea que para Djnago v1.10 ya sea parte del núcleo</li>
+							<li>El artículo propone crear con Django una chat con actualizaciones en tiempo real</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Introducción a Python</h3>
+						<h2>¿Dudas?</h2>
+					</section>
+					<section>
+						<h4>Python:</h4>
+						<ul>
+							<li>Tipos: Números y Cadenas</li>
+							<li>Operadores: + y *</li>
+							<li>Funciones: upper() y len()</li>
+							<li>Errores</li>
+							<li>Variables</li>
+							<li>Listas</li>
+							<li>Diccionarios</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Python:</h4>
+						<ul>
+							<li>Comparaciones: <, >, <=, >=, and y or</li>
+							<li>Lógicos: True, False</li>
+							<li>Creando archivos .py</li>
+							<li>Tomando decisiones if-elif-else</li>
+							<li>Funciones: def</li>
+							<li>Ciclos for</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Python:</h4>
+						<h3>Hagamos un ejemplo</h3>
+						<p>
+							Consiga la lista del nombre y email de 5 compañeros, cree una variable que contenga esta lista y luego obtenga los siguientes resultados:
+						</p>
+						<ul>
+							<li>Imprima la lista en orden alfabético con nombre y email</li>
+							<li>Imprima la lista con sólo el nombre pero indique cuantas letras tiene cada nombre.</li>
+							<li>Imprima la lista con sólo el dominio del email, en otras palabras imprima la lista de los dominios de donde provienen las emails</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Python:</h4>
+						<h3>Hagamos un ejemplo</h3>
+						<h3>... dedos a la obra!</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Django</h1>
+						<img src="img/python_django.jpg" alt="logo python django" width="50%" />
+					</section>
+					<section>
+						<h2>Django</h2>
+						<ul>
+							<li>Framework</li>
+							<li>¿Porqué Django?</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Django en acción</h2>
+						<h3>El primer proyecto <sup>(cap. 8)</sup></h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Modelando la realidad</h1>
+						<h3>Modelos en Django <sup>(cap. 9)</sup></h3>
+					</section>
+					<section>
+						<h3>Modelos</h3>
+						<ul>
+							<li>Análisis (hay que pensar!)</li>
+							<li>Nos convertimos en detectives y damos caza a las entidades (objetos), sus propiedades y acciones</li>
+							<li>El uso de piedra y cincel están permitidos</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Modelos</h3>
+						<ul>
+							<li>¿Ya tienes tú modelo labrado en piedra?</li>
+							<li>Es hora de describirlo de forma que Django lo entienda</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Administrado de Django <sup>(cap. 10)</sup></h3>
+						<ul>
+							<li>El modelo implica el uso de una base de datos</li>
+							<li>El administrador nos simplifica el mantenimiento de la información en la base de datos</li>
+							<li>Cuando las cosas se complican llame a su Administrador de Bases de Datos de cabezera</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Administrado de Django <sup>(cap. 10)</sup></h3>
+						<p>
+							Si has llegado hasta aquí...
+						</p>
+						<h2>Felicidades!</h2>
+						<p>
+							ha sido un gran paso para la humanidad ;)
+						</p>
+					</section>
+				</section>
 
+				<section>
+					<section>
+						<h2>¿Desplegar o Despegar?</h2>
+						<h3><sup>(cap. 11)</sup></h3>
+					</section>
+					<section>
+						<h3>Desplegar</h3>
+						<ul>
+							<li>Crear un repositorio local o repo local</li>
+							<li>Publicar el repo en github</li>
+							<li>Preparar pythonanywhere.com y clonar repo</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Desplegar</h3>
+						<h2>¡decirle al mundo que la vida virtual existe!</h2>
+					</section>
+				</section>
+			</div>
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
