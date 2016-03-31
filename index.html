@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="es">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Creando mi propio Blog / DjangoFriends</title>
+
+		<meta name="description" content="Un taller para crear un blog usando Django">
+		<meta name="author" content="DjangoFriends">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<img src="img/django-tux.png" alt="logo django" />
+					<h1>Bienvenidas(os)</h1>
+				</section>
+
+				<section>
+					<h2>Programando mi primer blog con Django</h2>
+					<p>
+						<small>Por <a href="https://gitter.im/rctorr/djangofriends">DjangoFriends</a> / @pathsr, @amapel, @kary, @aura, @jesus, <a href="http://twitter.com/rctorr">@rctorr</a></small>
+					</p>
+				</section>
+
+				<section>
+					<h2>Gracias a:</h2>
+					<ul>
+						<li><a href="http://www.telmexhub.org" target="_blank">Telmexhub</a></li>
+						<li>Equipo de apoyo / mentores</li>
+						<li>Asistentes al taller que han decidido dedicar unas horas de su vida (o-O)_/</li>
+						<li>Comunidad de <a href="https://djangogirls.org" target="_blank">DjangoGrils</a></li>
+						<li>A toda la comunidad de <a href="http://flisol.info/FLISOL2016" target="_blank">Software Libre</a></li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>DjangoFriends</h2>
+					<p>
+						Somos una comunidad donde aprendemos y compartimos Django, Python, HTML5, CSS3, Javascript (JS), Diseño grafico, ideas, proyectos, comidas y todo lo que tenga que ver con el diseño y desarrollo tanto de sitios web como de aplicaciones web.
+					</p>
+					<p>
+						<a href="https://gitter.im/rctorr/djangofriends">DjangoFriends</a>
+					</p>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section>
+					<section>
+						<h3>se acabó el rollo...</h3>
+						<h2>A crear mi primer blog</h2>
+						<h3>Etapas:</h3>
+						<ul>
+							<li>Instalación</li>
+							<li>Ejecución</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Hagamos comunidad, necesitamos de tu ayuda</h2>
+						<ul>
+							<li><strong>AGRUPARSE A LA IZQUIERDA</strong> si sabes instalar software, sabes conoces algún lenguaje de programación o simplemente te entiendes bien con las máquinas</li>
+							<li><strong>AGRUPENSE A LA DERECHA</strong> si lo tuyo es el diseño gráfico, las artes visuales, el comercio, o simplemente que abra una pestaña y abro todo lo que puedo un ojo</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Forma de trabajo</h2>
+						<ul>
+							<li><a href="http://tutorial.djangogirls.org/es/index.html">Tutorial DjangoGrils</a></li>
+							<li>Formato taller, se muestra en pantalla como se hace y nos van siguiendo</li>
+							<li>Auto dirigido, todos aquellos cuyas habilidades y experiencia les permita seguir por si mismos el tutorial</li>
+							<li>Contamos con el equipo de apoyo para ayudar a quien se vaya atorando en alguna tarea, instalación o simplemente algo no funcione</li>
+							<li>Sin embargo la idea es que todos se vuelan equipo de apoyo</li>
+						</ul>
+					</section>
+					<section>
+						<h2>La consola es su amiga, huuuuu! <sup>(cap. 2)</sup></h2>
+						<p>Leer y realizar los ejercicios</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Herramientas (Instalación)</h2>
+						<ul>
+							<li><a href="http://www.python.org">Python <sup>(cap. 3)</sup></a></li>
+							<li>Editores de código <sup>(cap. 4)</sup></li>
+							<ul>
+								<li><a href="https://www.sublimetext.com/" target="_blank">Sublime text</a></li>
+								<li><a href="http://atom.io" target="_blank">Atom</a></li>
+								<li><a href="http://brackets.io">Brackets</a></li>
+								<li><a href="https://notepad-plus-plus.org/">Notepad++</a></li>
+							</ul>
+						</ul>
+					</section>
+					<section>
+						<h2>Herramientas (Instalación)</h2>
+						<ul>
+							<li>Git <sup>(cap. 11)</sup></li>
+							<li>IPython: $ pip install ipython</li>
+							<li><a href="https://www.djangoproject.com/">Django</a> <sup>(cap. 7)</li>
+							<li>Verificar instalación Django:</li>
+							<ul>
+								<li>$ python</li>
+								<li>import django</li>
+								<li>django.VERSION</li>
+							</ul>
+							<li>Crear cuenta en <a href="http://github.com">github.com</a></li>
+							<li>Crear cuenta en <a href="http://pythonanywhere.com">pythonanywhere.com</a></li>
+						</ul>
+					</section>
+				</section>
+
+				<!--pre><code class="hljs" data-trim contenteditable>
+function linkify( selector ) {
+if( supports3DTransforms ) {
+
+var nodes = document.querySelectorAll( selector );
+
+for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+  var node = nodes[i];
+
+  if( !node.className ) {
+	node.className += ' roll';
+  }
+}
+}
+}
+				</code></pre-->
+
+				<section>
+					<h2>Y ahora ¿cómo funciona Internet? <sup>(cap. 1)</sup></h2>
+					<ul>
+						<li>Revisar concepto de cliente - servidor</li>
+						<li>¿Qué es un cliente?</li>
+						<li>¿Qué es un servidor?</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Introducción a Python <sup>(cap. 5)</sup></h2>
+					<ul>
+						<li>A programar...</li>
+					</ul>
+				</section>
+
+				<section>
+					<section>
+						<h2>Programando mi primer blog con Django</h2>
+						<h2>Día 2</h2>
+						<p>
+							<small>Por: <a href="http://twitter.com/pathSanch">@pathSanch</a>, @amapel, @kary, <a href="http://twitter.com/rctorr">@rctorr</a></small>
+						</p>
+						<p>
+							DjangoFriends: <a href="https://gitter.im/rctorr/djangofriends">http://gitter.im/rctorr/djangofriends</a>
+						</p>
+					</section>
+					<section>
+						<h3>La tarea:</h3>
+						<h2>¿Las peticiones que hace un navegador a un servidor web de que tipo son?</h2>
+						<ul>
+							<li>Las peticiones se realizan utilizando el protocolo <a href="https://es.wikipedia.org/wiki/Hypertext_Transfer_Protocol">HTTP</a></li>
+							<li>El protocolo HTTP es soportado por el protocolo <a href="https://es.wikipedia.org/wiki/Transmission_Control_Protocol">TCP</a> (Transmision Control Protocol)</li>
+						</ul>
+					</section>
+					<section>
+						<h3>La tarea:</h3>
+						<ul>
+							<li>El protocolo TCP lo primero que hace es establecer una conexión entre el cliente y servidor y luego entonces transmite los datos.</li>
+							<img src="img/client_server_interaction.gif" alt="img mostrando flujo de datos una petición http" />
+						</ul>
+					</section>
+					<section>
+						<h3>La tarea:</h3>
+						<ul>
+							<li>Las peticiones HTTP se responden bajo demanda y son unidireccionales</li>
+							<li>Los <a href="https://es.wikipedia.org/wiki/WebSocket">Websockets</a> también funcionan sobre TCP (orientados a conección) pero permiten una comunicación bidireccional</li>
+						</ul>
+					</section>
+					<section>
+						<h3>La tarea:</h3>
+						<ul>
+							<li>El 17 de marzo del 2016 publicaron <a href="https://blog.heroku.com/archives/2016/3/17/in_deep_with_django_channels_the_future_of_real_time_apps_in_django" target="_blank">Django Channels</a></li>
+							<li>Puede ser usado apartir de Django v1.9 como un modulo externo, pero se planea que para Djnago v1.10 ya sea parte del núcleo</li>
+							<li>El artículo propone crear con Django una chat con actualizaciones en tiempo real</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h3>Introducción a Python</h3>
+						<h2>¿Dudas?</h2>
+					</section>
+					<section>
+						<h4>Python:</h4>
+						<ul>
+							<li>Tipos: Números y Cadenas</li>
+							<li>Operadores: + y *</li>
+							<li>Funciones: upper() y len()</li>
+							<li>Errores</li>
+							<li>Variables</li>
+							<li>Listas</li>
+							<li>Diccionarios</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Python:</h4>
+						<ul>
+							<li>Comparaciones: <, >, <=, >=, and y or</li>
+							<li>Lógicos: True, False</li>
+							<li>Creando archivos .py</li>
+							<li>Tomando decisiones if-elif-else</li>
+							<li>Funciones: def</li>
+							<li>Ciclos for</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Python:</h4>
+						<h3>Hagamos un ejemplo</h3>
+						<p>
+							Consiga la lista del nombre y email de 5 compañeros, cree una variable que contenga esta lista y luego obtenga los siguientes resultados:
+						</p>
+						<ul>
+							<li>Imprima la lista en orden alfabético con nombre y email</li>
+							<li>Imprima la lista con sólo el nombre pero indique cuantas letras tiene cada nombre.</li>
+							<li>Imprima la lista con sólo el dominio del email, en otras palabras imprima la lista de los dominios de donde provienen las emails</li>
+						</ul>
+					</section>
+					<section>
+						<h4>Python:</h4>
+						<h3>Hagamos un ejemplo</h3>
+						<h3>... dedos a la obra!</h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Django</h1>
+						<img src="img/python_django.jpg" alt="logo python django" width="50%" />
+					</section>
+					<section>
+						<h2>Django</h2>
+						<ul>
+							<li>Framework</li>
+							<li>¿Porqué Django?</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Django en acción</h2>
+						<h3>El primer proyecto <sup>(cap. 8)</sup></h3>
+					</section>
+				</section>
+				<section>
+					<section>
+						<h1>Modelando la realidad</h1>
+						<h3>Modelos en Django <sup>(cap. 9)</sup></h3>
+					</section>
+					<section>
+						<h3>Modelos</h3>
+						<ul>
+							<li>Análisis (hay que pensar!)</li>
+							<li>Nos convertimos en detectives y damos caza a las entidades (objetos), sus propiedades y acciones</li>
+							<li>El uso de piedra y cincel están permitidos</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Modelos</h3>
+						<ul>
+							<li>¿Ya tienes tú modelo labrado en piedra?</li>
+							<li>Es hora de describirlo de forma que Django lo entienda</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Administrado de Django <sup>(cap. 10)</sup></h3>
+						<ul>
+							<li>El modelo implica el uso de una base de datos</li>
+							<li>El administrador nos simplifica el mantenimiento de la información en la base de datos</li>
+							<li>Cuando las cosas se complican llame a su Administrador de Bases de Datos de cabezera</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Administrado de Django <sup>(cap. 10)</sup></h3>
+						<p>
+							Si has llegado hasta aquí...
+						</p>
+						<h2>Felicidades!</h2>
+						<p>
+							ha sido un gran paso para la humanidad ;)
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>¿Desplegar o Despegar?</h2>
+						<h3><sup>(cap. 11)</sup></h3>
+					</section>
+					<section>
+						<h3>Desplegar</h3>
+						<ul>
+							<li>Crear un repositorio local o repo local</li>
+							<li>Publicar el repo en github</li>
+							<li>Preparar pythonanywhere.com y clonar repo</li>
+						</ul>
+					</section>
+					<section>
+						<h3>Desplegar</h3>
+						<h2>¡decirle al mundo que la vida virtual existe!</h2>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Direcciones o URL</h2>
+						<h3><sup>(cap. 12)</sup></h3>
+					</section>
+					<section>
+						<h3>URL's</h3>
+						<ul>
+							<li>¿Alguién las conoce?</li>
+							<li>Revisando mysite/urls.py</li>
+							<li>El famoso Regex</li>
+							<li>Controlado las peticiones con blog/urls.py</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Vistas, respondiendo a las peticiones</h2>
+						<h3><sup>(cap. 13)</sup></h3>
+					</section>
+					<section>
+						<h3>Vistas</h3>
+						<ul>
+							<li>Trabajando con blog/views.py</li>
+							<li>Mostrando la lista de artículos</li>
+							<li>¿Y el html apá?</li>
+						</ul>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Hagamos una página estática con HTL5 y CSS3</h2>
+						<h3><sup>(caps. 14 y 18)</sup></h3>
+					</section>
+					<section>
+						<h3>HTML5 y CSS3</h3>
+						<ul>
+							<li>Bosquejo / Diseño (nuevamente a donde quiero llegar)</li>
+							<li>Marcado define la estructura del contenido (HTML5)</li>
+							<li>Forma y presentación para ponernos hermosas(os) (CSS3)</li>
+							<li>Interacción, efectos, animación (HTML5+CSS3+Javascript)</li>
+						</ul>
+					</section>
+					<section>
+						<h3>HTML5 y CSS3</h3>
+						<ul>
+							<li>Crear una carpeta en Escritorio (Desktop) llamada pagina-ejemplo/</li>
+							<li>Crear el archivo index.html</li>
+							<li>Crear carpeta css/</li>
+							<li>Crear archivo css/main.css</li>
+						</ul>
+					</section>
+					<section>
+						<h3>HTML5 y CSS3</h3>
+						<h2>¿dudas?</h2>
+					</section>
+				</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
