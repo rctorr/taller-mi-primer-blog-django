@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Administrador de compras / DjangoFriends</title>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/main.css">
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+</head>
+<body>
+	<header>
+		<div class="ancho">
+			<h2>Mis Compras</h2>
+			<nav>
+				<a href="index.html">Todos</a>
+				<a href="porcomprar.html" class="activo">Por comprar</a>
+				<a href="comprados.html">Comprados</a>
+			</nav>
+			<div class="reset"></div>
+		</div>
+	</header>
+	<div class="contenido">
+		<div class="ancho">
+			<section>
+				<div class="titulo">
+					<h2>Por comprar</h2>
+					<a href="producto/nuevo" class="nuevo">+</a>
+					<div class="reset"></div>
+				</div>
+				<table>
+					<tr>
+						<th>
+							Producto
+						</th>
+						<th>
+							Registrado en
+						</th>
+						<th>
+							Comprado en
+						</th>
+					</tr>
+					<tr>
+						<td>
+							Jabón líquido para ropa
+						</td>
+						<td>
+							31-03-2016
+						</td>
+						<td>
+							<a href="producto/id/comprado">Comprado</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Sombies
+						</td>
+						<td>
+							13-03-2016
+						</td>
+						<td>
+							<a href="producto/id/comprado">Comprado</a>
+						</td>
+					</tr>
+				</table>
+			</section>
+		</div>
+	</div>
+	<footer>
+		<div class="ancho">
+			<p>
+				DjangoFriends copyleft 2016 | Buscanos en <a href="http://gitter.im/rctorr/taller-mi-primer-blog" target="_blank">gitter.im</a>
+			</p>
+
+		</div>
+	</footer>
+
+</body>
+</html>
